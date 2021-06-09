@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+.bowl{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    border: 4px solid white;
+    transform-origin: bottom center ;
+    animation: animate 5s linear infinite;
+}
+.bowl:before{
+    content: '';
+    position: absolute;
+    top:-10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 30px;
+    background: rgba(66,66,66);
+    border: 4px solid white;
+    border-radius: 50%;
+}
+.bowl:after{
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 80px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+.water{
+    position: absolute;
+    top: 50%;
+    left:5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(65,193,251,0.5);
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    transform-origin: top center ;
+    animation: animateWater 5s linear infinite;
+}
+.water:before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 50%;
+    background: #1fa4e0;
+}
+.shadow{
+    position: absolute;
+    top: calc(50% + 150px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 30px;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+    border-radius: 50%;
+}
+img.fish{
+    width: 100px;
+    animation: animatefish 5s linear infinite;
+}
+@keyframes animatefish {
+    0%{
+        transform: translate(0,0) rotateY(180deg);
+    }
+    50%{
+        transform: translate(180px,0) rotateY(180deg);
+    }
+    51%{
+        transform: translate(180px,0) rotateY(0deg);
+    }
+    100%{
+        transform: translate(0,0) rotateY(0deg);
+    }
+}
+@keyframes animate {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    25%{
+        transform: translate(-50%,-50%) rotate(15deg);
+    }
+    50%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    75%{
+        transform: translate(-50%,-50%) rotate(-15deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
+
+@keyframes animateWater {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-20deg);
+    }    
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

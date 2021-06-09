@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+
+    .top{
+        height:65vh;
+        width: 100vw;
+        background: radial-gradient(circle,rgb(255,214,10),rgb(15,15,15));
+    }
+    .bottom{
+        height:35vh;
+        width:100vw;
+        background: radial-gradient(circle,rgb(255,214,10),rgb(12,12,12));
+    
+    }
+    .imageWrapper{
+        position:absolute;
+
+        img{
+            width: 300px;
+            margin-top:-160px ;
+            -webkit-box-reflect: below 0px linear-gradient(transparent,rgb(255,255,255,0.8));
+        }
+    }
+
+}
