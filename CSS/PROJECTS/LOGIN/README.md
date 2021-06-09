@@ -7,5 +7,5 @@ This Login project is simply login page with some good design. Css is used To bu
 ----
 
 <p align="center">
-  <img src="login.png" > 
+  <img src="login.gif" > 
 </p>
