@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor</title>
+    <link rel="icon" href="{% static 'icon.png' %}" sizes="64x64 50x50 32x32">
+    
+    <style>
+        body{
+            background: lightgrey;
+        }
+        li{
+            list-style-type:none;
+        }
+        p{
+            width:200px;
+            font-size:15px;
+            position:absolute;
+            font-weight: bolder;
+            color:	#505050;
+            text-shadow:0px 1px 1px white;
+        }
+        h1{
+            text-align:center;
+            text-shadow:0px 3px 3px white;
+        }
+        .container1{
+            position:absolute;
+            top:200px;
+        }
+        .container2{
+            position:absolute;
+            left:500px;
+            top:200px;
+        }
+        .container3{
+            position:absolute;
+            top:200px;
+            left:1000px;
+        }
+        .container4{
+            position:absolute;
+            top:900px;
+        }
+        .container5{
+            position:absolute;
+            top:900px;
+            left:500px;
+        }
+        .container6{
+            position:absolute;
+            top:900px;
+            left:1000px;
+        }
+        .logo{
+            margin-top:-80px;
+
+        }
+        ul{
+            position: absolute;
+            top:200px;
+            left:150px;
+        }
+        .meet{
+            width:150px;
+            border-radius:50%;
+            border:5px solid grey;
+            margin-top:0px;
+            margin-left:50px;
+            box-shadow:0px 0px 10px black;
+        }
+        .shivang{
+            position:absolute;
+            top:10px;
+            width:150px;
+            border-radius:50%;
+            border:5px solid grey;
+            margin-left:540px;
+            box-shadow:0px 0px 10px black;
+        }
+        .libin{
+            position:absolute;
+            top:10px;
+            width:150px;
+            border-radius:50%;
+            border:5px solid grey;
+            margin-left:1000px;
+            box-shadow:0px 0px 10px black;
+        }
+        .keyur{
+            position:absolute;
+            width:150px;
+            border-radius:50%;
+            border:5px solid grey;
+            margin-top:500px;
+            margin-left:50px;
+            box-shadow:0px 0px 10px black;
+        }
+        .abhinav{
+            position:absolute;
+            width:150px;
+            border-radius:50%;
+            border:5px solid grey;
+            top:680px;
+            margin-left:540px;
+            box-shadow:0px 0px 10px black;
+        }
+        .deep{
+            position:absolute;
+            width:150px;
+            border-radius:50%;
+            border:5px solid grey;
+            top:680px;
+            margin-left:1000px;
+            box-shadow:0px 0px 10px black;
+        }
+        downbox{
+            margin-top:2000px;
+        }
+        .b{
+            background: inherit;
+            border:1px solid lightgrey;
+        }
+        .b:hover{
+            color:green;
+        }
+    
+    </style>
+
+</head>
+<body>
+    <form action="/after_login" method="post">
+        {% csrf_token %}
+            <button class="b" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+            <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+            </svg></button>
+    </form> 
+    <header>
+        <center>
+        <img class="logo" src="{% static 'logo.png' %}" alt="logo">
+        </center>
+    </header>
+
+    <ul>
+        <li><img class="meet" src="{% static 'meet.jpeg' %}" alt="image"><div class="container1"><h1>Dermatologist Meet.</h1><p>Dr. Meet is a well known dermatologist who deals with diseases and conditions of the skin, nails, and hair. He has specialized training for treating conditions such as eczema, skin cancer and acne</p></div></li>
+        <li><img class="shivang" src="{% static 'shivang.jpg' %}" alt="image"><div class="container2"><h1>Ophthalmologist Shivang.</h1><p>Dr. Shivang is specialized in eye and vision care. They treat diseases and conditions of the eyes and can perform eye surgery. He has speciality in treating people with complex eye conditions and may also see people for routine eye care, including prescribing glasses and performing checkups.
+        </p></div></li>
+        <li><img class="libin" src="{% static 'libin.jpeg' %}" alt="image"><div class="container3"><h1>Gynecologist Libin.</h1><p>Dr. Libin provides preventive care and disease management for female health conditions. He is specialized in gynaecology. Many women visits him regularly throughout pregnancy and for labor and delivery.  He also visits them for yearly checkups and tests, such as breast exams.
+        </p></div></li>
+        <li ><img class="keyur" src="{% static 'keyur.jpeg' %}" alt="image"><div class="container4"><h1>Cardiologists Keyur.</h1><p>Dr. Keyur focuses on the patients who have problems or conditions related to cardiovascular system, which includes the heart and blood vessels. He has treated many cardiovascular conditions. He also has training in internal medicine and pediatrics.
+        </p></div></li>
+        <li ><img class="abhinav" src="{% static 'abhinav.jpeg' %}" alt="image"><div class="container5"><h1>Neurologist Abhinav.</h1><p>Dr. Abhinav is specialized in treating conditions of the nerves, spine, and brain. He has treated many patients with epilepsy, Alzheimer’s disease, stroke and migraines.
+        </p></div></li>
+        <li ><img class="deep" src="{% static 'deep.jpeg' %}" alt="image"><div class="container6"><h1>General Surgeon Deep.</h1><p>Dr. Deep is a well known general surgeon who  performs surgical procedures on many organs and bodily systems. They may have training in diseases of the abdomen, breast, endocrine system, gastrointestinal system, skin related diseases. He also cares for a person both before and after their surgery and is a well known doctor due to his hospitality and after services.</p></div></li>
+    </ul>
+</body>
+</html>

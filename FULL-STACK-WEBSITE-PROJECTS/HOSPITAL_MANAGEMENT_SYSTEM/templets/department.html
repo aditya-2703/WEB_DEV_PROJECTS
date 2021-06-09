@@ -1,0 +1,419 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department</title>
+    <link rel="icon" href="{% static 'icon.png' %}" sizes="64x64 50x50 32x32">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+    *{
+        background-color:#3c415c;
+        
+    }
+    button{
+        font-family:'IBM Plex Mono', monospace;
+        font-weight:bolder;
+    }
+    a{
+        text-decoration:none;
+        background:rgba(0,0,0,0);
+        color:black;
+    }
+    .card1{
+        position:absolute;
+        height: 200px;
+        width:400px;
+        top:100px;
+        left:70px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+        
+    }
+
+    .card2{
+        position:absolute;
+        height: 200px;
+        width:400px;
+        top:100px;
+        left:570px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card3{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:100px;
+        left:1070px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card4{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:400px;
+        left:70px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card5{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:400px;
+        left:570px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card6{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:400px;
+        left:1070px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card7{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:700px;
+        left:70px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card8{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:700px;
+        left:570px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card9{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:700px;
+        left:1070px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card10{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1000px;
+        left:70px;
+       border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card11{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1000px;
+        left:570px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card12{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1000px;
+        left:1070px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card13{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1300px;
+        left:70px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card14{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1300px;
+        left:570px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card15{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1300px;
+        left:1070px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card16{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1600px;
+        left:70px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card17{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1600px;
+        left:570px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card18{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1600px;
+        left:1070px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card19{
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1900px;
+        left:70px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    .card20{    
+        position:absolute;
+        border:1px solid black;
+        height: 200px;
+        width:400px;
+        top:1900px;
+        left:570px;
+        border:1px solid white;
+        box-shadow:0px 0px 25px white;
+        background:rgba(150,150,255,0.5);
+    }
+
+    img{
+        position:absolute;
+        //background-size:cover;
+        width:160px;
+        left:-10px;
+        height:220px;
+        top:-10px;
+
+    
+    }
+
+    .text1:hover,.text2:hover,.text3:hover,.text4:hover,.text5:hover,.text6:hover,.text7:hover,.text8:hover,.text9:hover,.text10:hover,.text11:hover,.text12:hover,.text13:hover,.text14:hover,.text15:hover,.text16:hover,.text17:hover,.text18:hover,.text19:hover,.text20:hover{
+        color:grey;
+    }
+    .text1,.text2,.text3,.text4,.text5,.text6,.text7,.text8,.text9,.text10,.text11,.text12,.text13,.text14,.text15,.text16,.text17,.text18,.text19,.text20{
+        display:block;
+        text-align:center;
+        font-size:40px;
+    }
+    h1{
+        text-align:center;
+        font-size:60px;
+        margin-top:-50px;
+        text-shadow:0px 0px 10px grey;
+        positoin:fixed;
+    }
+    .b{
+        background: inherit;
+        border:1px solid #3c415c;
+    }
+    .b:hover{
+        color:green;
+    }
+
+    </style>
+</head>
+<body>
+<form action="/after_login" method="post">
+    {% csrf_token %}
+        <button class="b" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+        <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+        </svg></button>
+ </form>   
+    <section>
+    <h1>Choose Your Department</h1>
+    <form action="/appointment"> 
+     {% csrf_token %}
+        <button type="submit" onclick="click1()" class="card1"><a href="/appointment" class="text1"> Anesthetics</a></button>
+        <button type="submit" onclick="click2()" class="card2"><a href="/appointment" class="text2"> Breast Screening</a></button>
+        <button type="submit" onclick="click3()" class="card3"><a href="/appointment" class="text3"> Cardiology</a></button>
+        <button type="submit" onclick="click4()" class="card4"><a href="/appointment" class="text4"> Ear,nose and throat</a></button>
+        <button type="submit" onclick="click5()" class="card5"><a href="/appointment" class="text5"> Eldery service department</a></button>
+        <button type="submit" onclick="click6()" class="card6"><a href="/appointment" class="text6"> Gastroenterology</a></button>
+        <button type="submit" onclick="click7()" class="card7"><a href="/appointment" class="text7"> General Surgery</a></button>
+        <button type="submit" onclick="click8()" class="card8"><a href="/appointment" class="text8"> Gynecology</a></button>
+        <button type="submit" onclick="click9()" class="card9"><a href="/appointment" class="text9"> Hematology</a></button>
+        <button type="submit" onclick="click10()" class="card10"><a href="/appintment" class="text10"> Neonatal Unit</a></button>
+        <button type="submit" onclick="click11()" class="card11"><a href="/appintment" class="text11"> Neurology</a></button>
+        <button type="submit" onclick="click12()" class="card12"><a href="/appintment" class="text12"> Nutrition and dietetics</a></button>
+        <button type="submit" onclick="click13()" class="card13"><a href="/appintment" class="text13"> Obstretrics and gynecology units</a></button>
+        <button type="submit" onclick="click14()" class="card14"><a href="/appintment" class="text14"> Oncology</a></button>
+        <button type="submit" onclick="click15()" class="card15"><a href="/appintment" class="text15"> Opththalmology</a></button>
+        <button type="submit" onclick="click16()" class="card16"><a href="/appintment" class="text16"> Orthopedics</a></button>
+        <button type="submit" onclick="click17()" class="card17"><a href="/appintment" class="text17"> Physiotherapy</a></button>
+        <button type="submit" onclick="click18()" class="card18"><a href="/appintment" class="text18"> Renal Unit</a></button>
+        <button type="submit" onclick="click19()" class="card19"><a href="/appintment" class="text19"> Sexual Health</a></button>
+        <button type="submit" onclick="click20()" class="card20"><a href="/appintment" class="text20"> Urology</a></button>
+    </form>
+    </section>
+
+    <script>
+        function click1(){
+            localStorage.setItem('1','Anesthetics')
+        }
+        
+        function click2(){
+            localStorage.setItem('1','Breast Screening')
+        }
+    
+        function click3(){
+            localStorage.setItem('1','Cardiology')
+        }
+    
+        function click4(){
+            localStorage.setItem('1',' Ear,nose and throat')
+        }
+        function click5(){
+            localStorage.setItem('1','Eldery service department')
+        }
+        
+        function click6(){
+            localStorage.setItem('1','Gastroenterology')
+        }
+    
+        function click7(){
+            localStorage.setItem('1',' General Surgery')
+        }
+    
+        function click8(){
+            localStorage.setItem('1','Gynecology')
+        }
+        function click9(){
+            localStorage.setItem('1','Hematology')
+        }
+        
+        function click10(){
+            localStorage.setItem('1','Neonatal Unit')
+        }
+    
+    
+        function click11(){
+            localStorage.setItem('1','Neurology')
+        }
+    
+        function click12(){
+            localStorage.setItem('1','Nutrition and dietetics')
+        }
+        function click13(){
+            localStorage.setItem('1','Obstretrics and gynecology units')
+        }
+        
+        function click14(){
+            localStorage.setItem('1','Oncology')
+        }
+    
+    
+        function click15(){
+            localStorage.setItem('1','Opththalmology')
+        }
+    
+        function click16(){
+            localStorage.setItem('1','Orthopedics')
+        }
+        function click17(){
+            localStorage.setItem('1','Physiotherapy')
+        }
+        
+        function click18(){
+            localStorage.setItem('1','Renal Unit')
+        }
+    
+    
+        function click19(){
+            localStorage.setItem('1','Sexual Health')
+        }
+    
+        function click20(){
+            localStorage.setItem('1','Urology')
+        }
+        
+    
+    
+    </script>
+</body>
+</html>
