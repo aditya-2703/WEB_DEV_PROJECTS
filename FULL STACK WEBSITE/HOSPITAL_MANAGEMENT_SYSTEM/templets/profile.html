@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="{% static 'icon.png' %}" sizes="64x64 50x50 32x32">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .name{
+            text-align:center;
+            font-size:50px;
+            font-family:'Monda', sans-serif;
+        }
+
+        .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        }
+
+        .sidenav a , .sidenav div{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+
+        .sidenav a:hover , .sidenav div:hover{
+        color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a , .sidenav div{font-size: 18px;}
+        }
+        .get_data_course{
+            text-align:center;
+            position:relative;
+            top:100px; 
+           
+        }
+        .course_img{
+            width:100px;
+        }
+        .b{
+            background: inherit;
+            border:1px solid white;
+        }
+        .b:hover{
+            color:green;
+        }
+    
+    </style>
+
+</head>
+<body>
+    <form action="/after_login" method="post">
+        {% csrf_token %}
+            <button class="b" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+            <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+            </svg></button>
+    </form> 
+    <header class="name">welcome !</header>
+    <center>
+        <div class="">
+            {% if data is not None %}
+                {%  for d in data %}
+                <img class="course_img" src="{% static 'online-course.png' %}" alt="">
+                <h1> You have taken {{d.course}} course </h1>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </center>
+
+    <center>
+        <div class="">
+            {% if details is not None %}
+                {%  for d in details %}
+                <img class="course_img" src="{% static 'avatar.png' %}" alt="">
+                <h1> username : {{d.username}}  </h1>
+                <h1> first name: {{d.fname}}</h1>
+                <h1> last name: {{d.lname}}</h1>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </center>
+
+    <center>
+        <div class="">
+           {% if apointment is not None %}
+                {%  for d in apointment %}
+                    <img class="course_img" src="{% static 'calendar.png' %}" alt="">
+                        <h1> Department : {{d.department}}</h1>
+                        <h1> Date : {{d.date}}</h1>
+                {% endfor %}
+            {% endif %} 
+        </div>
+    </center>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/about_profile">About</a>
+        <a href="/about_appointment">Appointments</a>
+        <!-- <a onlclick="show_shopping()" >Shopping-cart</a> -->
+        <a href="/course_profile">Taken course</a>   
+        <a href="/logout">Log out</a>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Profile</span>
+
+    <main id="container">
+    
+    </main>
+
+
+
+
+    
+<script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

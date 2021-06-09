@@ -1,0 +1,806 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="{% static 'icon.png' %}" sizes="64x64 50x50 32x32">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link rel="icon" href="{% static 'logo.png' %}"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-image:url({% static 'bg_home_1.jpg' %});
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        .logo{
+            position:absolute;
+            top:-40px;
+            left:0px;
+        }
+        main{
+            position:relative;
+            top:100px;
+        }
+        main img{
+            box-shadow:0px 0px 15px green;
+        }
+        .ask>div{
+            position:relative;
+            font-family:'Inconsolata', monospace;
+            font-weight:bolder;
+            font-size:100px;
+            top:210px;
+        }
+        .box1{
+            position:absolute;
+            top:100px;
+            left:100px;
+            border:2px solid inherit;
+            width:300px;
+            height:400px;
+            list-style-type:none;
+        }
+        .logo_box1{
+            position:absolute;
+            left:128px;
+            height:64px;
+            width:64px;
+        }
+        
+        .box2{
+            position:absolute;
+            top:100px;
+            left:400px;
+            border:2px solid inherit;
+            width:300px;
+            height:400px;
+            list-style-type:none;
+        }
+        .logo_box2{
+            position:absolute;
+            left:128px;
+            height:64px;
+            width:64px;
+        }
+        .box3{
+            position:absolute;
+            top:100px;        
+            left:700px;
+            border:2px solid inherit;
+            width:300px;
+            height:400px;
+            list-style-type:none;
+
+        }
+        .logo_box3{
+            position:absolute;
+            left:128px;
+            height:64px;
+            width:64px;
+        }
+        .box4{
+            position:absolute;
+            top:100px;
+            left:1000px;
+            border:2px solid inherit;
+            width:300px;
+            height:400px;
+            list-style-type:none;
+
+        }
+        .logo_box4{
+            position:absolute;
+            left:128px;
+            height:64px;
+            width:64px;
+        }
+        .box5{
+            position:absolute;
+            top:500px;
+            left:100px;
+            border:2px solid inherit;
+            width:300px;
+            height:400px;
+            list-style-type:none;
+
+        }
+        .logo_box5{
+            position:absolute;
+            left:128px;
+            height:64px;
+            width:64px;
+        }
+        .box6{
+            position:absolute;
+            top:500px;
+            left:400px;
+            border:2px solid inherit;
+            width:300px;
+            height:400px;
+            list-style-type:none;
+
+        }
+        .logo_box6{
+            position:absolute;
+            left:128px;
+            height:64px;
+            width:64px;
+        }
+        .box7{
+            position:absolute;
+            top:500px;
+            left:700px;
+            border:2px solid inherit;
+            width:300px;
+            height:400px;
+            list-style-type:none;
+
+        }
+        .logo_box7{
+            position:absolute;
+            left:128px;
+            height:64px;
+            width:64px;
+        }
+        .box8{
+            position:absolute;
+            top:500px;
+            left:1000px;
+            border:2px solid inherit;
+            width:300px;
+            height:400px;
+            list-style-type:none;
+
+        }
+        .logo_box8{
+            position:absolute;
+            left:128px;
+            height:64px;
+            width:64px;
+        }
+        h2{
+            font-size:40px;
+            font-weight:bolder;
+            position:relative;
+            top:-50px;
+
+        }       
+        .box1:hover{
+            box-shadow:0px 0px 15px grey;
+
+        }
+        .box2:hover{
+            box-shadow:0px 0px 15px grey;
+        }
+        .box3:hover{
+            box-shadow:0px 0px 15px grey;
+        }
+        .box4:hover{
+            box-shadow:0px 0px 15px grey;
+        }
+        .box5:hover{
+            box-shadow:0px 0px 15px grey;
+        }
+        .box6:hover{
+            box-shadow:0px 0px 15px grey;
+        }
+        .box7:hover{
+            box-shadow:0px 0px 15px grey;
+        }
+        .box8:hover{
+            box-shadow:0px 0px 15px grey;
+        }
+
+        ul>li>a{
+            text-decoration:none;
+        }
+        ul>li>a>p{
+            position:absolute;
+            color:inherit;
+            font-size:15px;
+            text-align:center;
+            top:180px;
+        }
+        .text_1 ,.text_2,.text_3,.text_4,.text_5,.text_6,.text_7,.text_8{
+            color:rgba(0,0,0,0);   
+        }
+        .text_1:hover{
+            animation-name:color_black;
+            animation-duration:2s;
+            color:black;
+        }
+        .text_2:hover{
+            animation-name:color_black;
+            animation-duration:2s;
+            color:black;
+        }
+        .text_3:hover{
+            animation-name:color_black;
+            animation-duration:2s;
+            color:black;
+        }
+        .text_4:hover{
+            animation-name:color_black;
+            animation-duration:2s;
+            color:black;
+        }
+        .text_5:hover{
+            animation-name:color_black;
+            animation-duration:2s;
+            color:black;
+        }
+        .text_6:hover{
+            animation-name:color_black;
+            animation-duration:2s;
+            color:black;
+        }
+        .text_7:hover{
+            animation-name:color_black;
+            animation-duration:2s;
+            color:black;
+        }
+        .text_8:hover{
+            animation-name:color_black;
+            animation-duration:2s;
+            color:black;
+        }
+        @keyframes color_black{
+            from{color:rgba(0,0,0,0)}
+            to{color:black;}
+        }
+        .navbar{
+            position:absolute;
+            border:1px solid white;
+            right:154px;
+            width:300px;
+            height:50px;
+            background: #36454F;
+            border-radius:0px 100px ;
+        }
+        .navbar>ul>li{
+            list-style-type:none;
+        }
+        .login{
+            font-family:'Inconsolata', monospace;
+            position:absolute;
+            top:-10px;
+            left:90px;
+            font-size:40px;
+            font-weight:bolder;
+        }
+        .navbar:hover{
+            box-shadow:0px 0px 15px green;
+        }
+        
+        .login:hover{
+            color:white;
+        }
+
+        .foot>li{
+            list-style-type:none;
+        }
+        .dep_box{
+
+            position:absolute;
+            top:2000px;
+            left:0px;
+            border:1px solid black;
+            width:700px;
+            height:700px;
+
+        }
+        .dep{
+            position:absolute;
+            left:10px;
+            width:700px;
+            height:700px;
+            background-size:cover;
+        }
+        .doc_box{
+            
+            position:absolute;
+            top:2000px;
+            right:0px;
+            border:1px solid black;
+            width:100px;
+            height:100px;
+            background-size:cover;
+        }
+        .doc{
+            position:absolute;
+            right:0px;
+            width:500px;
+            height:300px;
+        }
+        .app_box{
+                
+            position:absolute;
+            top:2000px;
+            left:715px;
+            background-size:cover;
+        }
+        .app{
+            position:absolute;
+            width:300px;
+            height:300px;
+        }
+        .upd_box{
+            position:absolute;
+            top:1000px;
+            background-size:cover;
+        }
+        .upd{
+            position:absolute;
+            top:1309px;
+            left:683px;
+            width:300px;
+            height:400px;
+
+        }
+        .sho_box{
+            position:absolute;
+            background-size:cover;
+        }
+        .sho{
+            position:absolute;
+            top:1634px;
+            left:990px;
+            width:200px;
+            height:200px;
+        }
+        .ser_box{        
+            position:absolute;
+            background-size:cover;
+        }
+        .ser{
+            position:absolute;
+            top:1634px;
+            left:1199px;
+            width:275px;
+            height:200px;
+        }
+        .cou_box{
+            position:absolute;
+            background-size:cover;
+        }
+        .cou{
+            position: absolute;
+            top:1842px;
+            width:480px;
+            left:990px;
+            height:190px;
+        }
+        .heading{
+            position:absolute;
+            top:1800px;
+            width:900px;
+            left:300px;
+            height:170px;
+        }
+        
+
+        .heading>p {
+            position: relative;
+            top: 100px;
+            border-right: solid 3px rgba(0,255,0,.75);
+            white-space: nowrap;
+            overflow: hidden;    
+            font-family: 'Source Code Pro', monospace;  
+            font-size: 30px;
+        /* color: rgba(255,255,255,.70); */
+            color: black;
+        }
+
+
+            /* Animation */
+            .heading>p 
+            {
+            animation: animated-text 4s steps(29,end) 1s 1 normal both,
+                        animated-cursor 600ms steps(29,end) infinite;
+            }
+
+            /* text animation */
+
+            @keyframes animated-text{
+            from{width: 0;}
+            to{width: 472px;}
+            }
+
+            /* cursor animations */
+
+            @keyframes animated-cursor{
+            from{border-right-color: rgba(0, 217, 255, 0.75);}
+            to{border-right-color: transparent;}
+            }
+
+            footer{
+                border:1px solid black;
+                left:10px;
+                z-index: -1;
+                position:absolute;
+                top: 3120px;
+                width:1500px;
+                height:200px;
+                background: #000;
+            }
+            li{
+                list-style-type:none;
+            }
+            .contact_us{
+                font-size:40px;
+                text-align:center;
+            }
+            .contact_us:hover{
+                color:white;
+            }
+
+            #phone{
+                position:absolute;  
+                top:60px;
+                left:730px;
+
+            }
+            #phone:hover{
+                color:white;
+            }
+            #mail{
+                position:absolute;
+                top:60px;
+                left:780px;
+            }
+            #mail:hover{
+                color:white;
+            }
+            a{
+                text-decoration:none;
+            }
+            .terms{
+                position: absolute;
+                top:120px;
+                left:600px;
+                color:white;
+            }
+            .policy{
+                position: absolute;
+                top:120px;
+                left:850px;
+                color:white;
+            }
+            .marketing{
+                position:absolute;
+                top:90px;
+                left:670px;
+                color:grey;
+            }
+
+        .feedback{
+                position: absolute;
+                background: lightgrey;
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                backdrop-filter: blur( 20.0px );
+                -webkit-backdrop-filter: blur( 20.0px );
+                border: 1px solid lightgrey;
+                top: 2750px;
+                width: 1500px;
+                height: 370px;
+                left:10px;
+            }
+
+        .fname{
+            position: relative;
+            color: black;
+            font-size: 22px;
+            top:100px;
+            left:-250px;
+            font-weight: bolder;
+            font-family: 'Titillium Web', sans-serif;
+            
+        }
+        .fname1{
+            position: relative;
+            left: 20px;
+            height: 30px;
+            width: 200px;
+            border-radius:13px;
+            box-shadow:0px 0px 2px white;
+            background: inherit;
+            border: 0px solid white;
+        }
+        .lname{
+            position: relative;
+            left:-250px;
+            top: 110px;
+            color: black;
+            font-size: 22px;
+            font-weight: bolder;
+            font-family: 'Titillium Web', sans-serif;
+            
+        }
+        .lname1{
+            position: relative;
+            /* top:20px; */
+            left: 20px;
+            height: 30px;
+            width: 200px;
+            border-radius:13px;
+            box-shadow:0px 0px 2px white;
+            background: inherit;
+            border: 0px solid white;
+        }
+        .phone{
+            position: relative;
+            color: black;
+            top:120px;
+            left: -272px;
+            font-size: 22px;
+            font-weight: bolder;
+            font-family: 'Titillium Web', sans-serif;
+            
+        }
+        .phone1{
+            position: relative;
+            /* top:40px; */
+            left: 20px;
+            height: 30px;
+            width: 200px;
+            border-radius:13px;
+            box-shadow:0px 0px 2px white;
+            background: inherit;
+            border: 0px solid white;
+        }
+        .description{
+            position: relative;
+            color: black;
+            left: 400px;
+            top:-10px;
+            font-size: 22px;
+            font-weight: bolder;
+            font-family: 'Titillium Web', sans-serif;
+            
+        }
+        .description1{
+            position: relative;
+            /* top:20px; */
+            left: 30px;
+            height: 80px;
+            width: 300px;
+            border-radius:13px;
+            box-shadow:0px 0px 2px white;
+            background: inherit;
+            border: 0px solid white;
+        }
+        .location{
+            position: relative;
+            color: black;
+            top:60px;
+            left: 8px;
+            font-size: 22px;
+            font-weight: bolder;
+            font-family: 'Titillium Web', sans-serif;
+            
+        }
+        .location1{
+            position: relative;
+            /* top:40px; */
+            left: 30px;
+            height: 30px;
+            width: 200px;
+            border-radius:13px;
+            box-shadow:0px 0px 2px white;
+            background: inherit;
+            border: 0px solid white;
+        }
+        .button{
+            position:relative;
+            bottom:-30px;        
+            background-color:inherit;
+            border: 0px solid white;
+            width: 90px;
+            height: 40px;
+            font-weight: bolder;
+            box-shadow: 0px 0px 5px white;
+            
+        }
+        .fname1:hover{
+            background: lightblue;
+            color: #045de9;
+        }
+        .lname1:hover{
+            background: lightblue;
+            color: #045de9;
+        }
+        .phone1:hover{
+            background: lightblue;
+            color: #045de9;
+        }
+        .description1:hover{
+            background: lightblue;
+            color: #045de9;
+        }
+        .location1:hover{
+            background: lightblue;
+            color: #045de9;
+        }
+        .button:hover{
+            background: lightblue;
+            color: #045de9;
+        }    
+        ::placeholder{
+            font-size:18px;
+        }
+        form>h2{
+            position:relative;
+            top:40px;
+            font-size:50px;
+            color:black;
+
+        }
+
+
+        
+    
+    </style>
+    
+</head>
+<body>
+
+
+
+    <header><a href=""><img src="{% static 'logo.png' %}" class="logo" alt='logo'></a></header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/profile" class="login">{{ uname }}</a></li>
+            </ul>
+            
+        </nav>
+
+    <center>
+
+    <main>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://source.unsplash.com/1200x500/?medical-image" class="d-block border border-5 " alt="image">
+            <div class="carousel-caption d-none d-md-block text-light">
+                <h5>Health Education That Saves Lives</h5>
+                <p>------</p>
+            </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://source.unsplash.com/1200x500/?communication" class="d-block border border-5" alt="image">
+            <div class="carousel-caption d-none d-md-block text-light">
+                <h5>Integrated Communications That Builds Trusted Health Brands</h5>
+                <p>------</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="https://source.unsplash.com/1200x500/?protection" class="d-block border border-5" alt="image">
+            <div class="carousel-caption d-none d-md-block text-light">
+                <h5>Reputation Management That Protects Health Brands</h5>
+                <p>------</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+            
+    
+    
+    </main>
+
+    <section class="ask">
+        <div>Why choose us?</div>
+        <div class="slide hi-slide">
+            <div class="container"></div>
+                <ul>
+                    <li class="box1"><a href="/services"><img class="logo_box1" src="{% static 'serv.png' %}" alt="Img 1" /><br><h2>Services</h2><br><p class="text_1">The hospital provides 24-hour online services including emergency services and ambulance services. There are also well care provision for patients and visitors. There is also facility of calling doctor for home visits by booking an appointment</p></a></li>
+                    <li class="box2"><a href="/department"><img class="logo_box2" src="{% static 'calendar.png' %}" alt="Img 2" /><br><h2>Appintment</h2><br><p class="text_2" >The appointment can be done through the system. If there is availability of medical staff, you can book an appointment for a doctor's visit. You can also book an online appointment for consultancy and emergency services.</p></a></li>
+                    <li class="box3"><a href="/doctor"><img class="logo_box3" src="{% static 'doctor.png' %}" alt="Img 3" /><br><h2>Doctors</h2><br><p class="text_3">The doctors are well qualified. There are many doctors having multiple specializations for treating the patients. Everyone of them is well experienced and has performed various operations in their specialized fields</p></a></li>
+                    <li class="box4"><a href="/department"><img class="logo_box4" src="{% static 'depart.png' %}" alt="Img 4" /><br><h2>Department</h2><br><p class="text_4">There are several departments are found in the hospital namely Outpatient department (OPD), Inpatient Service (IP), Medical Department, Nursing Department, Paramedical Department, Physical Medicine and Rehabilitation Department, Operation Theatre Complex (OT)</p></a></li>
+                    <li class="box5"><a href="/blog"><img class="logo_box5" src="{% static 'blogging.png' %}" alt="Img 5" /><br><h2>Updated</h2><br><p class="text_5">The hospital has latest news, views and updates from all top sources for the Health industry. There also a column of blogs which are written by our doctors through which they provide tips and advices about their health to everyone</p></a></li>
+                    <li class="box6"><a href="/info"><img class="logo_box6" src="{% static 'info.png' %}" alt="Img 6" /><br><h2>Information</h2><br><p class="text_6">Our hospital is a health care institution providing patient treatment with specialized medical and nursing staff and medical equipment</p></a></li>
+                    <li class="box7"><a href="/shop"><img class="logo_box7" src="{% static 'shop.png' %}" alt="Img 7" /><br><h2>Shop</h2><br><p class="text_7">The hospital has a medical shop which has pharmacists that oversees the fulfillment of medical prescriptions and is available to counsel patients about prescription and over-the-counter drugs or about general health issues.</p></a></li>
+                    <li class="box8"><a href="/course"><img class="logo_box8" src="{% static 'online-course.png' %}" alt="Img 8"/><br><h2>Courses</h2><br><p class="text_8">Our hospital has collaborated with the government education program  which allows future medical students to get training to be specialized in the field of health.</p></a></li>
+                </p></li>
+                </ul>
+            </div>
+    </section>
+
+    <div class="heading">
+
+        <p class="typewriter">Hospital Management System.</p>
+    
+    </div>
+
+    <div>
+        <ul class='foot'>
+            <li class="dep_box"><img src="{% static 'department.jpg' %}" class="dep" alt="images"></li>
+            <li class="doc_box"><img src="{% static 'doctor.jpg' %}" class="doc" alt="images"></li>
+            <li class="app_box"><img src="{% static 'appointment.jpg' %}" class="app" alt="images"></li>
+            <li class="upd_box"><img src="{% static 'updated.jpg' %}" class="upd" alt="images"></li>
+            <li class="sho_box"><img src="{% static 'shop.jpg' %}" class="sho" alt="images"></li>
+            <li class="ser_box"><img src="{% static 'service.jpg' %}" class="ser" alt="images"></li>
+            <li class="cou_box"><img src="{% static 'course.jpg' %}" class="cou" alt="images"></li>
+    
+        </ul>
+    
+    
+    </div>
+
+
+
+    <section class="feedback">
+        <form action="/feedback" method="post">
+        {% csrf_token %}
+            <h2>How can we help you?</h2>
+            <div class="fname">First Name <input placeholder="Enter Your First Name" type="text" name="fname" class="fname1"></div>
+            <div class="lname">Last Name <input placeholder="Enter Your Last Name" name="lname" type="text" class="lname1"></div>
+            <div class="phone">Phone Number <input placeholder="Enter Your Phone No" type="text" name="phone" class="phone1"></div>
+            <span class="description">Message <input placeholder="Anything you want to say us" type="text" name="desc" class="description1"></span>
+            <span class="location">Location <input placeholder="Your current location" type="text" name="location" class="location1"></span>
+            <div class="submit"><button class="button" type="submit" value="Submit">Submit</button></div>
+        </form>
+    </section>
+
+
+    <footer>
+        <ul>
+        <li class="contact_us">Contact us</li>
+        <li><a href=""><svg id="phone" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+            </svg>
+            </a>
+        </li>
+        <li><a href=""><svg id="mail"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+            </svg>
+            </a>
+        </li>
+        <li class="marketing">
+            © Only Health Marketing 2021
+        </li>
+        <li>
+            <a class="terms" href="/terms-conditions/">Terms &amp; Conditions</a>
+        </li>
+        <li>
+            <a class="policy" href="/terms-conditions/#cookies">Cookie Policy</a>
+        </li>
+        </ul>
+    
+    </footer>
+
+<script type=text/javascript>
+    function preback(){
+        window.history.forward();
+        setTimeout("preback()",0)
+        window.onunload=funciton(){null}: 
+    }
+    if(!{{msg}}){
+    alert("Please Login for get more benifits");
+    }
+
+</script>
+
+
+</body>
+</html>

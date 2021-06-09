@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="icon" href="{% static 'icon.png' %}" sizes="64x64 50x50 32x32">
+    
+
+
+    <style>
+        label {
+        display: block;
+        font: 1rem 'Fira Sans', sans-serif;
+        }
+
+        input,
+        label {
+            margin: .4rem 0;
+        }
+        .appointment{
+            text-align:center;
+            font-size:40px;
+            margin-top:10px;
+        }
+        #meeting-time{
+            margin-top:50px;
+            margin-left:650px;
+        }
+        .check{
+            position:relative;
+            top:160px;
+            border:1px solid white;
+            width:100px ;
+            height:60px;
+            font-size:30px;
+            background:grey;
+        }
+        .check:hover{
+            background: lightgreen;
+        }
+        .confirm{
+            position:relative;
+            top:80px;
+            left:-200px;
+            width:200px;
+            height:30px;
+            border:1px solid grey;
+        }
+        ::placeholder{
+            text-align:center;
+        }
+        .confirm:hover{
+            transform:scalex(1.5);
+        }
+        .logo{
+            margin-left:660px;
+            margin-top:-100px;
+
+        }
+        .b{
+            background: inherit;
+            border:1px solid white;            
+        }
+        .b:hover{
+            color:green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form action="/department" method="post">
+    {% csrf_token %}
+    <button class="b"type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+    <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+    </svg></button>
+ </form>   
+
+    <header id="heading">
+        <img class="logo" src="{% static 'logo.png' %}" alt="">
+    </header>
+    
+    <main>
+        <form action="/appointment" method="post">
+        {% csrf_token %}
+        <label for="meeting-time" class="appointment"><center>Choose a time for your appointment:</center></label>
+
+        <input name="datetime" type="datetime-local" id="meeting-time"
+            name="meeting-time" value="2021-06-12T19:30"
+            min="2021-06-07T00:00" max="2050-06-14T00:00">
+
+        <input type="text" name="department" class="confirm" placeholder="confirm your department">
+        <center><button type="submit" onclick="check()" class="check">Check</button></center>
+        </form>
+    
+    </main>
+
+    <script>
+        var temp=localStorage.getItem('1');
+        if(temp !==null){
+            var element=document.createElement("h1");
+            var text=document.createTextNode("Department :"+temp);
+            element.appendChild(text);
+            var parent=document.getElementById("heading");
+            parent.appendChild(element);
+            element.style.color="black";
+            element.style.fontSize="50px";
+            element.style.textAlign="center";
+        }
+
+        function check(){
+            localStorage.clear()
+        }
+    </script>
+</body>
+</html>
