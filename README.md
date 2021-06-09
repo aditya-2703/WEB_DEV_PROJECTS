@@ -3,7 +3,7 @@
 ----
 
 <p align="center">
-  <img width="200" src="img.png">
+  <img width="400" src="img.png">
 </p>
 
   ## [HTML]()
