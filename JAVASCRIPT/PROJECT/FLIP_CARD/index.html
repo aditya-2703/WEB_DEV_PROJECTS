@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card Game</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,500;1,300;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Flip Card Game</h1>
+        <img id="header_logo" src="/PNG/honor_heart-14.png" alt="image">
+    </header>
+    
+    <div id="party_background">
+
+    </div>
+
+    <div class="score">
+        <div id="player_score"></div>
+        <div id="opp_score"></div>
+    </div>
+    
+    <section id="box_cont" class="container">
+        <ul>
+            <img onclick="clicked_card(this)"  class="card" id="0" src="/PNG/AC.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="1" src="/PNG/AD.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="2" src="/PNG/AH.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="3" src="/PNG/AS.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="4" src="/PNG/2C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="5" src="/PNG/2D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="6" src="/PNG/2H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="7" src="/PNG/2S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="8" src="/PNG/3C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="9" src="/PNG/3D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="10" src="/PNG/3H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="11" src="/PNG/3S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="12" src="/PNG/4C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="13" src="/PNG/4D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="14" src="/PNG/4H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="15" src="/PNG/4S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="16" src="/PNG/5C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="17" src="/PNG/5D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="18" src="/PNG/5H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="19" src="/PNG/5S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="20" src="/PNG/6C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="21" src="/PNG/6D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="22" src="/PNG/6H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="23" src="/PNG/6S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="24" src="/PNG/7C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="25" src="/PNG/7D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="26" src="/PNG/7H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="27" src="/PNG/7S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="28" src="/PNG/8C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="29" src="/PNG/8D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="30" src="/PNG/8H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="31" src="/PNG/8S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="32" src="/PNG/9C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="33" src="/PNG/9D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="34" src="/PNG/9H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="35" src="/PNG/9S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="36" src="/PNG/10C.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="37" src="/PNG/10D.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="38" src="/PNG/10H.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="39" src="/PNG/10S.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="40" src="/PNG/JC.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="41" src="/PNG/JD.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="42" src="/PNG/JH.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="43" src="/PNG/JS.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="44" src="/PNG/QC.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="45" src="/PNG/QD.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="46" src="/PNG/QH.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="47" src="/PNG/QS.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="48" src="/PNG/KC.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="49" src="/PNG/KD.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="50" src="/PNG/KH.png" alt="image">
+            <img onclick="clicked_card(this)"  class="card" id="51" src="/PNG/KS.png" alt="image">
+        </ul>
+        <center><button id="start_btn"class="start" onclick="start()">Start</button></center>
+    
+    </section>
+    
+    
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
