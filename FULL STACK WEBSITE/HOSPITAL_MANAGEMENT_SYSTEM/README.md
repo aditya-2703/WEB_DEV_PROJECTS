@@ -15,7 +15,7 @@ Features:
 ## WEBSITE
 
 <p align="center">
-  <img src="hsm.png">
+  <img src="hsm_gif.gif">
 </p>
 
 -----
