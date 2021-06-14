@@ -1,0 +1,6 @@
+button>svg{
+    fill:black;
+}
+button>svg:hover{
+    fill:blue;
+}

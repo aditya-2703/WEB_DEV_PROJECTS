@@ -1,0 +1,109 @@
+*{
+    background-color: rgb(99,164,255);
+    background-image: linear-gradient(315deg, rgba(99,164,255,0.8) 50%, rgba(131,234,241,0.8) 50%);
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: transparent;
+    flex-wrap: wrap;
+}
+.box{
+    display:flex;
+    justify-content: center;
+    align-items: center;    
+    flex-wrap:wrap;
+}
+.header_container{
+    border-radius: 30px;
+    width:900px;
+    height: 600px;
+    position: relative;
+    top:80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    box-shadow:0px 0px 8px #2a2a72;
+
+    background: rgba(255,255,255,.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
+}
+.heading{
+    font-size:100px;
+    position: absolute;
+    top:0px;
+    background:transparent;
+}
+/* .task_head{
+
+    position: absolute;
+    top:150px;
+    font-weight:bolder;
+    font-size:35px;
+    font-family:Courier,okay,serif;
+    background:transparent; */
+/* } */
+.desc_head{
+
+    display:none;
+    position: absolute;
+    top:200px;
+    font-weight:bolder;
+    font-size:35px;
+    font-family:Courier,okay,serif;
+    background:transparent;
+
+}
+/* .button{
+    position:absolute;
+    top:230px;
+    width:80px;
+    height:40px;
+    border:1px solid white;
+    background:  rgb(99,164,255);
+    border-radius:210px;    
+    box-shadow:0px 0px 5px grey;
+}
+.button:active{
+    background: lightblue;
+}
+.task{
+    position:relative;
+    border:2px solid    rgb(99,164,255);
+    top:-5px;
+    width:250px;
+    height:40px;
+    border-radius:210px;
+    /* box-shadow:0px 0px 5px grey; */
+    /* background:transparent; */
+/* }  */
+.desc{
+    display:none;
+    position:relative;
+    border:2px solid    rgb(99,164,255);
+    top:-5px;
+    width:250px;
+    height:40px;
+    border-radius:210px;
+    /* box-shadow:0px 0px 5px grey; */
+    background:transparent;
+}
+::placeholder{
+    text-align:center;
+}
+.task:hover{
+    box-shadow:0px 5px 15px #2a2a72;
+}
+.button:hover{
+    box-shadow:0px 0px 5px #2a2a72;
+}
+.check_svg{
+    background:transparent;
+    position: absolute;
+    top:-20px;
+    height: 300px;
+    left:10px;
+}
