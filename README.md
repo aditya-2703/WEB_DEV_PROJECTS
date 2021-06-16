@@ -9,6 +9,7 @@
   ## [HTML](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/HTML)
   * [MODERN_LIFE-STYLE](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/HTML/PROJECT/MODERN_LIFE_STYLE)
   * [NATURE](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/HTML/PROJECT/NATURE)
+  * [PORTFOLIO](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/HTML/PROJECT/PORTFOLIO)
   
   ## [CSS](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/CSS)
   * [WATCH](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/CSS/PROJECTS/WATCH)
