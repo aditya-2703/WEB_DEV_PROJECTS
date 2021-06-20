@@ -1,0 +1,363 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-commerce</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="{%  static 'shop/index.css' %}"> -->
+        <!-- CSS only -->
+        <link rel="icon" href="{% static 'shop/icon.png' %}">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+        <style>
+                *{
+                    margin: 0;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+                }
+                body{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .non_bootstrap_searchbar{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 90vw;
+                }
+                .search_input{
+                    font-size: large;
+                    border: 2px solid grey;
+                    border-radius: 5px;
+                    width: 80vw;
+                    padding: 1%;
+                }
+                .non_bootstrap_search_btn{
+                    background: transparent;
+                    border: none;
+                }
+                .non_bootstrap_search_btn svg{
+                    width: 60px;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                .non_bootstrap_search_btn svg:hover{
+                    width: 60px;
+                    padding: 10px;
+                    fill: green;
+
+                }
+                .non_bootstrap_container{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+                .card{
+                    position: relative;
+                    /* border: 2px dashed blue; */
+                    background: #a7d129;
+                    width: 350px;
+                    height: 450px;
+                    margin-top: 10vh; 
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 20px;
+                    flex-wrap: wrap;
+                    /* flex-direction:column ; */
+
+                }
+                .non_bootsrap_image{
+                    /* background-color: #8BC6EC;
+                    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+                    
+                    background: white;
+                    position: absolute;
+                    top: -40px;
+                    left: 13%;
+                    width: 250px;
+                    height: 250px;
+                    border-radius:20px;
+                    box-shadow: 0px 0px 15px black;
+                }
+                .content{
+                    /* display: none; */
+                    /* color:white; */
+                    display: flex;
+                    justify-content: center; 
+                    align-items: center;
+                    flex-wrap: wrap;
+                    position: absolute;
+                    top: 250px;
+                    /* margin-top: calc(500px - 70%); */
+                }
+                .title{
+                    justify-self:center;
+                    font-weight: bolder;
+                    font-size: 40px;
+                    color:black;
+                    position: relative;
+                    top: -10px;
+                    text-shadow: 0px 3px 1px white;
+                }
+                .para{
+                    /* display: none; */
+                    justify-self:center;
+                    /* cursor: pointer; */
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    margin: auto;
+                    word-break: break;
+                    color:black;
+                }
+                .price{
+                    display: none;
+                    /* justify-self:left; */
+                    font-size: 15px;
+                    font-weight: bolder;
+                    left: 180px;
+                    color:grey;
+                    position: absolute;
+                    top: 120px;
+                }
+                /* .price::before{
+                    content: 'Price :';
+                } */
+                li{
+                    list-style-type: none;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                    cursor: pointer;
+                }
+                .pages{   
+                    display: flex;
+                    justify-content: space-evenly;
+                    /* flex-direction: row; */
+                }
+                .pages li{
+                    border:0 solid lightslategray;
+                    padding: 10px;
+                    width: 10vw;
+                    margin: 70px;
+                    text-align: center;
+                    background: lightgrey;
+                    font-weight: bolder;
+                }
+                .pages li:hover{
+                    cursor: pointer;
+                    background: grey;
+                }
+                .view ,.addtocart{
+                    display: flex;
+                    /* top: 50vh; */
+                    height: 5vh;
+                    padding: 7px;
+                    margin:45px ;
+                    margin-left: 30px;
+                    margin-right: 30px;
+                    justify-content: center;
+                    font-weight: bolder;
+                    border: 4px solid black;
+                    border-radius: 10px;
+                    align-items: center;
+                    background: transparent;
+                }
+                /* .addtocart{
+                    padding: 7px;
+                    height: 5vh;
+                } */
+                .view:hover , .addtocart:hover{
+                    background: grey;
+                    color: white;
+                }
+                .view:active, .addtocart:active{
+                    background: black;
+                    color: white;
+                }
+                .non_bootstrap_navbar{
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                }
+                .non_bootstrap_nav_container{
+                    display: flex;
+                    position: relative;
+                    justify-content: space-evenly;
+                    /* border: 2px solid grey; */
+                    width: 50vw;
+                    padding: 2vh;
+                    /* border-radius: 30px; */
+                }
+                .non_bootstrap_nav_container li {
+                    border-bottom: 0.2rem solid yellowgreen;
+                    /* border-left: 0.2rem solid yellowgreen;
+                    border-right: 0.2rem solid yellowgreen; */
+                    padding: 1vh;
+                    font-size: larger;
+                    font-weight: bolder;
+                    /* border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px; */
+                }
+                .non_bootstrap_nav_container li>a:hover {
+                    color: grey;
+                }
+                #nav_cart{
+                    background: transparent;
+                    border: none;
+                    border-bottom:#a7d129;
+                    font-weight: bolder;
+                }
+
+
+
+        </style>
+
+
+</head>
+
+<body>
+
+    <div class="non_bootstrap_navbar">
+        <ul class="non_bootstrap_nav_container">
+            <!-- <li><a href="">Navbar</a></li> -->
+            <li><a href="">Home</a></li>
+            <!-- data-bs-html="true" type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" -->
+            <li><button id="nav_cart">
+                Cart(0)
+              </button>
+                
+                </li>
+            <!-- <li><a href="">Features</a></li> -->
+            <li><a href="/checkout">Checkout</a></li>
+        </ul>
+    </div>
+
+
+    <div class="non_bootstrap_container">
+        <form class="non_bootstrap_searchbar">
+            <input class="search_input" name="item_name" placeholder="Search for Product" type="search">
+            <button type="submit" class="non_bootstrap_search_btn">
+                <?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="119.828px" height="122.88px"
+                    viewBox="0 0 119.828 122.88" enable-background="new 0 0 119.828 122.88" xml:space="preserve">
+                    <g>
+                        <path
+                            d="M48.319,0C61.662,0,73.74,5.408,82.484,14.152c8.744,8.744,14.152,20.823,14.152,34.166 c0,12.809-4.984,24.451-13.117,33.098c0.148,0.109,0.291,0.23,0.426,0.364l34.785,34.737c1.457,1.449,1.465,3.807,0.014,5.265 c-1.449,1.458-3.807,1.464-5.264,0.015L78.695,87.06c-0.221-0.22-0.408-0.46-0.563-0.715c-8.213,6.447-18.564,10.292-29.814,10.292 c-13.343,0-25.423-5.408-34.167-14.152C5.408,73.741,0,61.661,0,48.318s5.408-25.422,14.152-34.166C22.896,5.409,34.976,0,48.319,0 L48.319,0z M77.082,19.555c-7.361-7.361-17.53-11.914-28.763-11.914c-11.233,0-21.403,4.553-28.764,11.914 C12.194,26.916,7.641,37.085,7.641,48.318c0,11.233,4.553,21.403,11.914,28.764c7.36,7.361,17.53,11.914,28.764,11.914 c11.233,0,21.402-4.553,28.763-11.914c7.361-7.36,11.914-17.53,11.914-28.764C88.996,37.085,84.443,26.916,77.082,19.555 L77.082,19.555z" />
+                    </g>
+                </svg>
+            </button>
+        </form>
+        {% for item in product_list %}
+        <div class="card">
+            <img class="non_bootsrap_image" src="{{item.image}}" alt="">
+            <div class="content">
+                <div id="name{{item.id}}" class="title">{{item.title}}</div>
+                <div id="desc{{item.id}}" class="para">{{item.discription}}</div>
+                <!-- &#8377; -->
+                <div id="price{{item.id}}" class="price"> {{item.price}}</div>
+                <a class="view" href="{{item.id}}">View</a>
+                <button class="addtocart atc" id="{{item.id}}">Add to cart</button>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="pagination">
+        <!-- <div class="paginator_container"> -->
+        <ul class="pages">
+            {% if product_list.has_previous %}
+            <li class="page-item">
+                <a href="?page={{product_list.previous_page_number}}" class="">prev</a>
+            </li>
+            {% endif %}
+
+            <li class="page-item">
+                <a href="?page={{product_list.number}}" class="">Curr</a>
+            </li>
+
+            {% if product_list.has_next %}
+            <li class="page-item">
+                <a href="?page={{product_list.next_page_number}}" class="">next</a>
+            </li>
+            {% endif %}
+        </ul>
+        <!-- </div> -->
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    if (localStorage.getItem('cart') == null) {
+        var cart = {};
+    }
+    else {
+        cart = JSON.parse(localStorage.getItem('cart'))
+    }
+    
+    var nav_cart = document.getElementById('nav_cart');
+    nav_cart.innerHTML = `Cart(${Object.keys(cart).length})`;
+    $(document).on('click', '.atc', function () {
+        // console.log('clicked in add cart')
+        var item_id = this.id.toString();
+        // console.log(item_id)
+        if (cart[item_id] != undefined) {
+            quantity = cart[item_id][0] + 1
+            cart[item_id][0]=quantity
+            cart[item_id][2]+=parseFloat(document.getElementById(`price${item_id}`).innerHTML)
+            console.log(item_id, 'count', quantity)
+        }
+        else {
+            quantity = 1
+            let name = document.getElementById(`name${item_id}`).innerHTML
+            let price =parseFloat(document.getElementById(`price${item_id}`).innerHTML)
+            let desc = document.getElementById(`desc${item_id}`).innerHTML
+            cart[item_id] = [quantity,name,price,desc]
+            
+        }
+        console.log(cart)
+        localStorage.setItem('cart', JSON.stringify(cart))
+
+        var nav_cart = document.getElementById('nav_cart');
+        nav_cart.innerHTML = `Cart(${Object.keys(cart).length})`;
+    });
+    
+    
+    // console.log(cart)
+    DisplayCart(cart);
+    function DisplayCart(cart){
+        var CartStr = "";
+        CartStr += "<h5>This is your cart.</h5>";
+        cartIndex = 1
+        for(var x in cart){
+            CartStr += cartIndex + ".&nbsp;";
+            // console.log(CartStr)
+            CartStr += document.getElementById(`name${x}`).innerHTML + "&nbsp;&nbsp;&nbsp;&nbsp;" + "Qnt : " + cart[x][0] + "<br>"
+            cartIndex+=1;
+        }
+
+        document.getElementById("nav_cart").setAttribute('data-bs-content',CartStr);
+        CartStr += "<a href='/checkout'><button class='btn btn-warning' id='checkout'></button></a>"
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            document.getElementById("nav_cart").setAttribute('data-bs-content',CartStr)
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+        
+    }
+    
+    
+
+</script>
+
+</html>

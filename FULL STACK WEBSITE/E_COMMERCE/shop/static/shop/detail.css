@@ -1,0 +1,22 @@
+body{
+    overflow: hidden;
+}
+.title{
+    font-size: 6.0rem;
+    text-shadow: 0px 5px 5px grey;
+}
+.price{
+    font-size: 2.4rem;
+}
+.red{
+    margin-left: -80px;
+    color:red;
+}
+.green{
+    color:green;
+    margin-left: -3.0rem;
+}
+.discription{
+    font-size: 1.8rem;
+    color: grey;
+}
