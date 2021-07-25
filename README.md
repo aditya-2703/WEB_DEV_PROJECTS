@@ -19,7 +19,6 @@
   * [CARD-GLASSMORPHISM](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/CSS/PROJECTS/CARD_GLASSMORPHISM)
   
   ## [JAVASCRIPT](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/JAVASCRIPT)
-  * [AGE IN DAYS](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/JAVASCRIPT/PROJECT/AGE_IN_DAYS)
   * [CLOCK](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/JAVASCRIPT/PROJECT/CLOCK)
   * [ROCK PAPER SCISSOR](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/JAVASCRIPT/PROJECT/ROCK_PAPER_SCISSOR)
   * [FACT-SITE](https://github.com/aditya-2703/WEB_DEV_PROJECTS/tree/main/JAVASCRIPT/PROJECT/FACTS_SITE)
