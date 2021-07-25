@@ -4,7 +4,7 @@ Here this is simple todo app with the react js this todo website add todo to the
 
 # How to run app 
 
- ```npx create-react-app my-app
+```npx create-react-app my-app
 cd my-app
 npm start```
 
