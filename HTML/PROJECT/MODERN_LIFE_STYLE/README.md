@@ -5,7 +5,7 @@ Here this website is article on modern life style. This website is build using o
 # How to run app 
 
  * You can write this code on any text editor.
- * give the extension .html
+ * give the extension `.html`
  * open in browser
 
 ## What it looks like
