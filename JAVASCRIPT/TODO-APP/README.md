@@ -13,5 +13,5 @@ npm start
 ## What it looks like
 
 <p align="center">
-  <img src="clock_gif.gif">
+  <img src="todo_gif.gif">
 </P>
